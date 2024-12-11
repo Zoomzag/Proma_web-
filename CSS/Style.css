@@ -1,0 +1,106 @@
+body {
+    background-color: #060a33;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: #20bfc0e0;
+}
+
+h1, h2 {
+    text-align: center;
+    font-size: 4rem;
+    color: #DBD3D3;
+}
+
+.bento {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.grid {
+    background-color: #0ecbd585;
+    padding: 0em;
+    border-radius: .5em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.grid h3 {
+    font-size: 2.5em;
+    color: aliceblue;
+}
+
+.grid p {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.grid:hover {
+    background-color: #07515585;
+    transform: scale(1.05);
+}
+
+.button-modificar {
+    display: block;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    color: #ffffff;
+    background-color: #20bfc0;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-modificar:hover {
+    background-color: #051cec;
+    transform: scale(1.1);
+}
+
+/* Aquí no debe haber reglas de grid-column fuera de los media queries */
+
+/* Para pantallas de 768px o menos */
+@media (max-width: 768px) {
+.bento {
+grid-template-columns: repeat(2, 1fr);
+}
+.grid:nth-child(1) {
+grid-column: 1/3; /* Afecta el primer grid, ocupa toda la fila */
+}
+h1 {
+color: #f90000;
+}
+}
+
+/* Para pantallas de 480px o menos */
+@media (max-width: 480px) {
+.bento {
+grid-template-columns: repeat(1, 1fr); /* Todos los grids se muestran en una sola columna */
+}
+.grid:nth-child(1) {
+grid-column: auto; /* Ajusta las columnas según el tamaño */
+}
+.grid:nth-child(4) {
+grid-column: auto;
+}
+h1 {
+color: #535ed63a;
+}
+}
+.roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }

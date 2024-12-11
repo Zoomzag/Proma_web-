@@ -1,0 +1,33 @@
+body {
+    background-color: #060a33;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    text-align: center;
+    font-size: 4rem;
+    color: #DBD3D3;
+}
+
+p {
+    text-align: center;
+    font-size: 2rem;
+    color: #DBD3D3;
+}
+
+.button-modificar {
+    display: block;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    color: #ffffff;
+    background-color: #20bfc0;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
